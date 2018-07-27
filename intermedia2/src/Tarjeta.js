@@ -3,13 +3,15 @@ import App from './App';
 
 class Tarjeta extends React.Component {
 
-    
     render() {
-      console.log (this.props);
+      console.log(this);
+    
         return (
           <div className="tarjeta">
-            <img />
-            <h2> Hola </h2>
+            <img  />
+            <h2> 
+              {this.name}
+            </h2>
            <ul>
               <li>Hola</li>
             </ul>

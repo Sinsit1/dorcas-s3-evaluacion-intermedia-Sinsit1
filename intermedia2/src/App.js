@@ -3,11 +3,20 @@ import Tarjeta from './Tarjeta';
 
 class App extends Component {
   render() {
-    console.log(this.props);
+    let data=this.props.pokemons;
+    console.log(data);
     return (
       <div className="App">
         <h1>Mi lista de Pokemons</h1>
-        <Tarjeta />
+          
+        {data.map(function(x) {
+          console.log(data.name);
+            return 
+              (<Tarjeta name={data.name}/>)
+          })
+        }
+       
+        
       </div>
     );
   }
