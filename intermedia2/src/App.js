@@ -8,9 +8,13 @@ class App extends Component {
       <div className="App">
         <h1>Mi lista de Pokemons</h1>
           
-        {data.map(function(x) {
+        {data.map(function(data) {
+          console.log(data.name);
             return 
-              (<Tarjeta name={x.name} img={x.url}/>)
+              (<Tarjeta 
+                  name={data.name} 
+                  img={data.url}
+                />)
           })
         }
        

@@ -4,13 +4,13 @@ class Tarjeta extends React.Component {
   
 
     render() {
-      console.log(this);
+      console.log(this.props);
     
         return (
           <div className="tarjeta">
-            <img  src={this.img}/>
+            <img alt="imagen"  src={this.props.img}/>
             <h2> 
-              {this.name}
+              {this.props.name}
             </h2>
            <ul>
               <li>Hola</li>
