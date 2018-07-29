@@ -1,19 +1,26 @@
 import React from 'react';
-
+import './index.css';
 class Tarjeta extends React.Component {
-  
 
     render() {
-      console.log(this.props);
+    const pokemons=this.props;
+      const types= pokemons.types;
+      console.log(types);
     
         return (
           <div className="tarjeta">
-            <img alt="imagen"  src={this.props.img}/>
-            <h2> 
-              {this.props.name}
+            <img className='images' alt="imagen"  src={pokemons.img}/>
+            <h2 className='name'> 
+              {pokemons.name}
             </h2>
-           <ul>
-              <li>Hola</li>
+            <ul className='habilities'>
+              {
+                types.map( (types) =>{
+                  return ( 
+                    <li className='card'>{types} </li>
+                    )
+                  })
+              }
             </ul>
           </div>
         );
